@@ -1,0 +1,368 @@
+{
+  "personal": {
+    "name": "GUILHERME",
+    "year": 2026,
+    "cvFile": "/cv.pdf",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/guilherme-ferreira-668479277/",
+      "github": "https://github.com/GuilhermeFerreira80"
+    },
+    "en": {
+      "role": "INFORMATICS ENGINEER STUDENT",
+      "subtitle": "Studying and making projects related to Cybersecurity and Cloud Engineering.",
+      "footerText": "Designed & Built by"
+    },
+    "pt": {
+      "role": "ESTUDANTE DE ENGENHARIA INFORMÁTICA",
+      "subtitle": "A estudar e a desenvolver projetos relacionados com Cibersegurança e Cloud Engineering.",
+      "footerText": "Desenhado e Construído por"
+    }
+  },
+  "about": {
+    "en": {
+      "paragraphs": [
+        "<b>Hey!</b> I'm <highlight>Guilherme</highlight>, an Informatics Engineering student with a keen interest in <highlight>Cybersecurity</highlight> and <highlight>Cloud Engineering</highlight>. I love building systems that are both secure and scalable.",
+        "Currently studying at university (UPCoimbra) and working on projects that bridge security principles with modern cloud architectures.",
+        "When I'm not playing games or studying, you'll find me exploring new <highlight>CTF challenges</highlight> or experimenting with home lab setups."
+      ],
+      "stats": [
+        {
+          "target": 5,
+          "suffix": "+",
+          "label": "Projects"
+        },
+        {
+          "target": 2,
+          "suffix": "+",
+          "label": "Years Learning"
+        },
+        {
+          "target": 15,
+          "suffix": "+",
+          "label": "Technologies"
+        }
+      ]
+    },
+    "pt": {
+      "paragraphs": [
+        "<b>Olá!</b> Sou o <highlight>Guilherme</highlight>, um estudante de Engenharia Informática com grande interesse em <highlight>Cibersegurança</highlight> e <highlight>Cloud Engineering</highlight>. Adoro construir sistemas seguros e escaláveis.",
+        "Atualmente estou a estudar na universidade (UPCoimbra) e a trabalhar em projetos que ligam princípios de segurança com arquiteturas cloud modernas.",
+        "Quando não estou a jogar ou estudar, encontras-me em novos <highlight>desafios CTF</highlight> ou a experimentar configurações de home lab."
+      ],
+      "stats": [
+        {
+          "target": 5,
+          "suffix": "+",
+          "label": "Projetos"
+        },
+        {
+          "target": 2,
+          "suffix": "+",
+          "label": "Anos a Aprender"
+        },
+        {
+          "target": 15,
+          "suffix": "+",
+          "label": "Tecnologias"
+        }
+      ]
+    }
+  },
+  "projects": {
+    "en": [
+      {
+        "icon": "fa-shield-alt",
+        "title": "Network Intrusion Detection System",
+        "desc": "A machine-learning powered IDS that monitors network traffic and detects anomalous behavior in real-time using Python and Scikit-learn.",
+        "tags": [
+          "Python",
+          "Scikit-learn",
+          "Wireshark",
+          "ML"
+        ],
+        "github": "#",
+        "live": "#"
+      },
+      {
+        "icon": "fa-cloud",
+        "title": "Cloud Infrastructure Automation",
+        "desc": "Automated AWS infrastructure provisioning using Terraform and Ansible, with CI/CD pipelines integrated for seamless deployments.",
+        "tags": [
+          "Terraform",
+          "AWS",
+          "Ansible",
+          "Docker"
+        ],
+        "github": "#",
+        "live": "#"
+      },
+      {
+        "icon": "fa-lock",
+        "title": "Secure Password Manager",
+        "desc": "A CLI-based password manager with AES-256 encryption, master password hashing using bcrypt, and zero-knowledge architecture.",
+        "tags": [
+          "Python",
+          "AES-256",
+          "bcrypt",
+          "CLI"
+        ],
+        "github": "#"
+      },
+      {
+        "icon": "fa-server",
+        "title": "Home Lab Setup & Monitoring",
+        "desc": "Personal home lab with pfSense firewall, Proxmox hypervisor, and a full ELK stack for centralized logging and monitoring.",
+        "tags": [
+          "pfSense",
+          "Proxmox",
+          "ELK",
+          "Linux"
+        ],
+        "github": "#",
+        "live": "#"
+      }
+    ],
+    "pt": [
+      {
+        "icon": "fa-shield-alt",
+        "title": "Sistema de Deteção de Intrusões",
+        "desc": "Um IDS baseado em machine learning que monitoriza o tráfego de rede e deteta comportamentos anómalos em tempo real usando Python.",
+        "tags": [
+          "Python",
+          "Scikit-learn",
+          "Wireshark",
+          "ML"
+        ],
+        "github": "#",
+        "live": "#"
+      },
+      {
+        "icon": "fa-cloud",
+        "title": "Automação de Infraestrutura Cloud",
+        "desc": "Provisionamento automatizado de infraestrutura AWS usando Terraform e Ansible, com pipelines CI/CD integradas.",
+        "tags": [
+          "Terraform",
+          "AWS",
+          "Ansible",
+          "Docker"
+        ],
+        "github": "#",
+        "live": "#"
+      },
+      {
+        "icon": "fa-lock",
+        "title": "Gestor de Palavras-Passe Seguro",
+        "desc": "Gestor de passwords em CLI com encriptação AES-256, hashing com bcrypt e arquitetura zero-knowledge.",
+        "tags": [
+          "Python",
+          "AES-256",
+          "bcrypt",
+          "CLI"
+        ],
+        "github": "#"
+      },
+      {
+        "icon": "fa-server",
+        "title": "Home Lab e Monitorização",
+        "desc": "Home lab com firewall pfSense, hypervisor Proxmox e stack ELK completa para logging e monitorização centralizada.",
+        "tags": [
+          "pfSense",
+          "Proxmox",
+          "ELK",
+          "Linux"
+        ],
+        "github": "#",
+        "live": "#"
+      }
+    ]
+  },
+  "skills": {
+    "en": {
+      "categories": [
+        {
+          "key": "cyber",
+          "title": "Cybersecurity",
+          "icon": "fa-shield-halved",
+          "type": "bars",
+          "items": [
+            {
+              "label": "Penetration Testing",
+              "pct": 75
+            },
+            {
+              "label": "Network Security",
+              "pct": 80
+            },
+            {
+              "label": "CTF / Forensics",
+              "pct": 70
+            },
+            {
+              "label": "SIEM / Log Analysis",
+              "pct": 65
+            }
+          ]
+        },
+        {
+          "key": "cloud",
+          "title": "Cloud & DevOps",
+          "icon": "fa-cloud",
+          "type": "bars",
+          "items": [
+            {
+              "label": "AWS",
+              "pct": 70
+            },
+            {
+              "label": "Docker / Kubernetes",
+              "pct": 65
+            },
+            {
+              "label": "Terraform / IaC",
+              "pct": 60
+            },
+            {
+              "label": "CI/CD Pipelines",
+              "pct": 68
+            }
+          ]
+        },
+        {
+          "key": "programming",
+          "title": "Programming",
+          "icon": "fa-code",
+          "type": "pills",
+          "items": [
+            "Python",
+            "Bash",
+            "JavaScript",
+            "C",
+            "Java",
+            "SQL",
+            "PowerShell",
+            "HTML/CSS"
+          ]
+        },
+        {
+          "key": "tools",
+          "title": "Tools & Platforms",
+          "icon": "fa-tools",
+          "type": "pills",
+          "items": [
+            "Kali Linux",
+            "Wireshark",
+            "Burp Suite",
+            "Nmap",
+            "Metasploit",
+            "Git",
+            "Linux",
+            "Proxmox"
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "categories": [
+        {
+          "key": "cyber",
+          "title": "Cibersegurança",
+          "icon": "fa-shield-halved",
+          "type": "bars",
+          "items": [
+            {
+              "label": "Testes de Intrusão",
+              "pct": 75
+            },
+            {
+              "label": "Segurança de Redes",
+              "pct": 80
+            },
+            {
+              "label": "CTF / Forense",
+              "pct": 70
+            },
+            {
+              "label": "SIEM / Análise Logs",
+              "pct": 65
+            }
+          ]
+        },
+        {
+          "key": "cloud",
+          "title": "Cloud & DevOps",
+          "icon": "fa-cloud",
+          "type": "bars",
+          "items": [
+            {
+              "label": "AWS",
+              "pct": 70
+            },
+            {
+              "label": "Docker / Kubernetes",
+              "pct": 65
+            },
+            {
+              "label": "Terraform / IaC",
+              "pct": 60
+            },
+            {
+              "label": "Pipelines CI/CD",
+              "pct": 68
+            }
+          ]
+        },
+        {
+          "key": "programming",
+          "title": "Programação",
+          "icon": "fa-code",
+          "type": "pills",
+          "items": [
+            "Python",
+            "Bash",
+            "JavaScript",
+            "C",
+            "Java",
+            "SQL",
+            "PowerShell",
+            "HTML/CSS"
+          ]
+        },
+        {
+          "key": "tools",
+          "title": "Ferramentas e Plataformas",
+          "icon": "fa-tools",
+          "type": "pills",
+          "items": [
+            "Kali Linux",
+            "Wireshark",
+            "Burp Suite",
+            "Nmap",
+            "Metasploit",
+            "Git",
+            "Linux",
+            "Proxmox"
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "email": "guilherme@example.com",
+    "en": {
+      "intro": "Whether you want to <highlight>collaborate</highlight> on a project, talk about cybersecurity, or just say hi — feel free to reach out!",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john@example.com",
+      "messagePlaceholder": "Hey Guilherme, let's talk about...",
+      "sendButton": "Send Message",
+      "sentButton": "Sent!"
+    },
+    "pt": {
+      "intro": "Seja para <highlight>colaborar</highlight> num projeto, falar sobre cibersegurança, ou simplesmente dizer olá — sinta-se à vontade para entrar em contacto!",
+      "namePlaceholder": "João Silva",
+      "emailPlaceholder": "joao@exemplo.com",
+      "messagePlaceholder": "Olá Guilherme, queria falar sobre...",
+      "sendButton": "Enviar Mensagem",
+      "sentButton": "Enviado!"
+    }
+  }
+}
