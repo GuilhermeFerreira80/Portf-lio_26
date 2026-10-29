@@ -3,11 +3,11 @@ name: Deploy Portfolio to AWS
 on:
   push:
     branches:
-      - main  # Se a tua branch principal for master, altera aqui para master
+      - main
 
 permissions:
-  id-token: write   # Obrigatório para autenticação via OIDC
-  contents: read    # Necessário para fazer checkout do código
+  id-token: write
+  contents: read
 
 jobs:
   build-and-deploy:
@@ -34,6 +34,8 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::339712868174:role/PortfolioDeploymentPolicy
           aws-region: eu-north-1
+          role-session-name: GitHubActionsDeployment
+          role-skip-session-tagging: true
 
       - name: Deploy to S3
         run: |
