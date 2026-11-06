@@ -27,21 +27,22 @@ export default function App() {
     return () => window.removeEventListener('mousemove', move)
   }, [])
 
-  /* Scroll spy — watches right panel scroll */
+  /* Scroll spy — watches right panel scroll on desktop and window scroll on mobile */
   useEffect(() => {
     const panel = rightRef.current
     if (!panel) return
 
     const onScroll = () => {
-      const panelTop = panel.getBoundingClientRect().top
+      const isMobile = window.innerWidth <= 768
+      const containerTop = isMobile ? 0 : panel.getBoundingClientRect().top
+      const containerHeight = isMobile ? window.innerHeight : panel.clientHeight
       let current = SECTIONS[0]
 
       SECTIONS.forEach((id) => {
         const el = document.getElementById(id)
         if (!el) return
         const rect = el.getBoundingClientRect()
-        // section is considered active when its top passes the upper 40% of the viewport
-        if (rect.top - panelTop < panel.clientHeight * 0.4) {
+        if (rect.top - containerTop < containerHeight * 0.42) {
           current = id
         }
       })
@@ -49,7 +50,11 @@ export default function App() {
     }
 
     panel.addEventListener('scroll', onScroll, { passive: true })
-    return () => panel.removeEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => {
+      panel.removeEventListener('scroll', onScroll)
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
 
   /* Scroll to section */
@@ -57,10 +62,16 @@ export default function App() {
     const el = document.getElementById(id)
     const panel = rightRef.current
     if (!el || !panel) return
-    panel.scrollTo({ top: el.offsetTop - 40, behavior: 'smooth' })
+    if (window.innerWidth <= 768) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      panel.scrollTo({ top: el.offsetTop - 40, behavior: 'smooth' })
+    }
   }, [])
 
   const toggleLang = () => setLang(l => l === 'en' ? 'pt' : 'en')
+
+  const displayName = data.personal.fullName || (data.personal.name.charAt(0) + data.personal.name.slice(1).toLowerCase())
 
   return (
     <>
@@ -69,6 +80,7 @@ export default function App() {
 
       {/* Language toggle */}
       <button className="lang-toggle" onClick={toggleLang} aria-label="Toggle language">
+        <i className="fas fa-globe" style={{ marginRight: '0.35rem' }} />
         {lang.toUpperCase()}
       </button>
 
@@ -87,7 +99,16 @@ export default function App() {
 
           <footer className="site-footer">
             <p>
-              {data.personal[lang].footerText} <span className="highlight">{data.personal.name.charAt(0) + data.personal.name.slice(1).toLowerCase()}</span> · {data.personal.year}
+              {data.personal[lang].footerText}{' '}
+              <a
+                href={data.personal.socials.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="highlight footer-link"
+              >
+                {displayName}
+              </a>{' '}
+              · {data.personal.year}
             </p>
           </footer>
         </main>

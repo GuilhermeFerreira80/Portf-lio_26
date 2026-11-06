@@ -4,11 +4,10 @@ import data from '../data/portfolioData.json'
 function useReveal(ref) {
   const [visible, setVisible] = useState(false)
   useEffect(() => {
-    const panel = document.getElementById('right-panel')
-    if (!panel || !ref.current) return
+    if (!ref.current) return
     const observer = new IntersectionObserver(
       ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { root: panel, threshold: 0.1 }
+      { threshold: 0.1 }
     )
     observer.observe(ref.current)
     return () => observer.disconnect()

@@ -33,7 +33,11 @@ export default function CanvasBg() {
         const angle = (Math.PI / 180) * (60 * i - 30)
         const x = cx + size * Math.cos(angle)
         const y = cy + size * Math.sin(angle)
-        i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
+        if (i === 0) {
+          ctx.moveTo(x, y)
+        } else {
+          ctx.lineTo(x, y)
+        }
       }
       ctx.closePath()
       ctx.stroke()

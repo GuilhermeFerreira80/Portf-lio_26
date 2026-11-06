@@ -30,7 +30,7 @@ export default function LeftPanel({ activeSection, onNavClick, lang }) {
         clearInterval(timer)
         setTimeout(() => setTypingDone(true), 800)
       }
-    }, 25)
+    }, 22)
     return () => clearInterval(timer)
   }, [lang, subtitle])
 
@@ -52,6 +52,13 @@ export default function LeftPanel({ activeSection, onNavClick, lang }) {
           </h1>
 
           <p className="title-role">{personal[lang].role}</p>
+
+          {personal.location && (
+            <div className="location-badge">
+              <i className="fas fa-location-dot" />
+              <span>{personal.location}</span>
+            </div>
+          )}
 
           <p className={`subtitle${typingDone ? '' : ' typing'}`}>
             {typedText}
@@ -81,7 +88,7 @@ export default function LeftPanel({ activeSection, onNavClick, lang }) {
       <div className="profile-photo-wrapper">
         <img
           src={profileImg}
-          alt={personal.name}
+          alt={personal.fullName || personal.name}
           className="profile-photo"
           draggable="false"
         />
@@ -94,25 +101,36 @@ export default function LeftPanel({ activeSection, onNavClick, lang }) {
           <span>{labels.cv}</span>
         </a>
         <a
-          href={personal.socials.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="social-icon"
-          aria-label="LinkedIn"
-        >
-          <i className="fab fa-linkedin-in" />
-        </a>
-        <a
           href={personal.socials.github}
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
           aria-label="GitHub"
+          title="GitHub"
         >
           <i className="fab fa-github" />
         </a>
+        <a
+          href={personal.socials.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+          aria-label="LinkedIn"
+          title="LinkedIn"
+        >
+          <i className="fab fa-linkedin-in" />
+        </a>
+        {data.contact?.email && (
+          <a
+            href={`mailto:${data.contact.email}`}
+            className="social-icon"
+            aria-label="Email"
+            title={data.contact.email}
+          >
+            <i className="fas fa-envelope" />
+          </a>
+        )}
       </div>
     </aside>
   )
 }
-

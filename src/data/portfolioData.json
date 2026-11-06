@@ -1,178 +1,393 @@
 {
   "personal": {
     "name": "GUILHERME",
+    "fullName": "Guilherme Ferreira",
     "year": 2026,
     "cvFile": "/cv.pdf",
+    "location": "Coimbra, Portugal · ISEC",
     "socials": {
       "linkedin": "https://www.linkedin.com/in/guilherme-ferreira-668479277/",
-      "github": "https://github.com/GuilhermeFerreira80"
+      "github": "https://github.com/GuilhermeFerreira80",
+      "website": "https://www.guiferreira.xyz"
     },
     "en": {
-      "role": "INFORMATICS ENGINEER STUDENT",
-      "subtitle": "Studying and making projects.",
+      "role": "INFORMATICS ENGINEERING · CYBERSECURITY, NETWORKING & CLOUD",
+      "subtitle": "Focused on Defensive Cybersecurity, Enterprise Networking, Cloud Engineering & Systems Administration.",
       "footerText": "Designed & Built by"
     },
     "pt": {
-      "role": "ESTUDANTE DE ENGENHARIA INFORMÁTICA",
-      "subtitle": "A estudar e a desenvolver projetos.",
+      "role": "ENGENHARIA INFORMÁTICA · CIBERSEGURANÇA, REDES & CLOUD",
+      "subtitle": "Focado em Cibersegurança Defensiva, Redes Empresariais, Cloud Engineering e Administração de Sistemas.",
       "footerText": "Desenhado e Construído por"
     }
   },
   "about": {
     "en": {
       "paragraphs": [
-        "<b>Hey!</b> I'm <highlight>Guilherme</highlight>, an Informatics Engineering student with a keen interest in <highlight>Cybersecurity</highlight> and <highlight>Cloud Engineering</highlight>. I love building systems that are both secure and scalable.",
-        "Currently studying at university (UPCoimbra) and working on projects that bridge security principles with modern cloud architectures.",
-        "When I'm not playing games or studying, you'll find me exploring new <highlight>CTF challenges</highlight> or experimenting with home lab setups."
+        "<b>Hey!</b> I'm <highlight>Guilherme Ferreira</highlight>, an Informatics Engineering student at <b>Instituto Superior de Engenharia de Coimbra (ISEC)</b> in Portugal, focused on <highlight>Cybersecurity</highlight>, <highlight>Enterprise Networking</highlight>, <highlight>Cloud Engineering</highlight>, and <highlight>Systems Administration</highlight>.",
+        "Alongside my degree, I actively maintain a production <highlight>Self-Hosted Linux & Docker Homelab</highlight> — featuring zero-trust ingress via <b>Cloudflare Tunnels</b> and <b>Nginx Proxy Manager</b>, private cloud storage with <b>Nextcloud & MariaDB</b>, real-time telemetry through <b>Netdata</b>, containerized mail services, and encrypted node-to-node management over a <b>Tailscale</b> mesh VPN.",
+        "Whether I'm deploying <highlight>Suricata IDS</highlight> sensors on Security Onion, designing multi-area OSPF/IPv6 topologies in <b>GNS3</b>, or writing low-level multi-process systems in <b>C/C++</b>, my goal is to build a solid technical foundation bridging infrastructure, networking, cloud, and defensive security."
+      ],
+      "focusTitle": "CURRENT FOCUS & GOALS",
+      "focusItems": [
+        {
+          "icon": "fa-shield-halved",
+          "title": "Defensive Cybersecurity & IDS",
+          "desc": "Threat detection, Suricata IDS rules on Security Onion, traffic analysis, and alert fatigue mitigation."
+        },
+        {
+          "icon": "fa-cloud",
+          "title": "Cloud Engineering & DevOps",
+          "desc": "Serverless architectures on AWS (S3, CloudFront, IAM), automated GitHub Actions CI/CD, and container orchestration."
+        },
+        {
+          "icon": "fa-network-wired",
+          "title": "Networking & Self-Hosted Infra",
+          "desc": "Enterprise routing/switching (OSPF, EIGRP, VLANs, Fiber/Wi-Fi 7) and 24/7 Linux homelab administration."
+        }
       ],
       "stats": [
         {
-          "target": 5,
+          "target": 9,
           "suffix": "+",
-          "label": "Projects"
+          "label": "Featured Projects"
         },
         {
-          "target": 2,
+          "target": 25,
           "suffix": "+",
-          "label": "Years Learning"
+          "label": "Technologies & Tools"
         },
         {
-          "target": 15,
+          "target": 6,
           "suffix": "+",
-          "label": "Technologies"
+          "label": "Homelab Services"
         }
       ]
     },
     "pt": {
       "paragraphs": [
-        "<b>Olá!</b> Sou o <highlight>Guilherme</highlight>, um estudante de Engenharia Informática com grande interesse em <highlight>Cibersegurança</highlight> e <highlight>Cloud Engineering</highlight>. Adoro construir sistemas seguros e escaláveis.",
-        "Atualmente estou a estudar na universidade (UPCoimbra) e a trabalhar em projetos que ligam princípios de segurança com arquiteturas cloud modernas.",
-        "Quando não estou a jogar ou estudar, encontras-me em novos <highlight>desafios CTF</highlight> ou a experimentar configurações de home lab."
+        "<b>Olá!</b> Sou o <highlight>Guilherme Ferreira</highlight>, estudante de Engenharia Informática no <b>Instituto Superior de Engenharia de Coimbra (ISEC)</b>, focado em <highlight>Cibersegurança</highlight>, <highlight>Redes Empresariais</highlight>, <highlight>Cloud Engineering</highlight> e <highlight>Administração de Sistemas</highlight>.",
+        "Em paralelo com a licenciatura, mantenho ativamente um <highlight>Homelab Self-Hosted em Linux e Docker</highlight> — com exposição segura sem port-forwarding via <b>Cloudflare Tunnels</b> e <b>Nginx Proxy Manager</b>, cloud privada com <b>Nextcloud e MariaDB</b>, telemetria em tempo real com <b>Netdata</b>, servidor de email contentorizado e administração encriptada via rede mesh <b>Tailscale</b>.",
+        "Seja a implementar sensores <highlight>Suricata IDS</highlight> em Security Onion, a arquitetar topologias OSPF/IPv6 no <b>GNS3</b> ou a desenvolver sistemas multiprocesso de baixo nível em <b>C/C++</b>, o meu objetivo é construir uma base técnica sólida que una infraestrutura, redes, cloud e segurança defensiva."
+      ],
+      "focusTitle": "FOCO ATUAL & OBJETIVOS",
+      "focusItems": [
+        {
+          "icon": "fa-shield-halved",
+          "title": "Cibersegurança Defensiva & IDS",
+          "desc": "Deteção de ameaças, regras Suricata IDS em Security Onion, análise de tráfego e mitigação de fadiga de alertas."
+        },
+        {
+          "icon": "fa-cloud",
+          "title": "Cloud Engineering & CI/CD",
+          "desc": "Arquiteturas serverless na AWS (S3, CloudFront, IAM), pipelines CI/CD com GitHub Actions e contentorização."
+        },
+        {
+          "icon": "fa-network-wired",
+          "title": "Redes & Infraestrutura Self-Hosted",
+          "desc": "Encaminhamento empresarial (OSPF, EIGRP, VLANs, Fibra/Wi-Fi 7) e administração de homelab Linux 24/7."
+        }
       ],
       "stats": [
         {
-          "target": 5,
+          "target": 9,
           "suffix": "+",
-          "label": "Projetos"
+          "label": "Projetos em Destaque"
         },
         {
-          "target": 2,
+          "target": 25,
           "suffix": "+",
-          "label": "Anos a Aprender"
+          "label": "Tecnologias & Ferramentas"
         },
         {
-          "target": 15,
+          "target": 6,
           "suffix": "+",
-          "label": "Tecnologias"
+          "label": "Serviços Homelab"
         }
       ]
     }
   },
   "projects": {
+    "filters": {
+      "en": [
+        { "key": "all", "label": "All" },
+        { "key": "security", "label": "Networking & Security" },
+        { "key": "cloud", "label": "Cloud & Homelab" },
+        { "key": "systems", "label": "Systems & Software" }
+      ],
+      "pt": [
+        { "key": "all", "label": "Todos" },
+        { "key": "security", "label": "Redes & Segurança" },
+        { "key": "cloud", "label": "Cloud & Homelab" },
+        { "key": "systems", "label": "Sistemas & Software" }
+      ]
+    },
     "en": [
       {
-        "icon": "fa-shield-alt",
-        "title": "Network Intrusion Detection System",
-        "desc": "A machine-learning powered IDS that monitors network traffic and detects anomalous behavior in real-time using Python and Scikit-learn.",
+        "icon": "fa-server",
+        "category": "cloud",
+        "featured": true,
+        "badge": "Production Homelab",
+        "title": "Self-Hosted Homelab & Infrastructure",
+        "desc": "Self-hosted Linux production environment managed via Docker & Portainer. Features zero-trust ingress via Cloudflare Tunnels and Nginx Proxy Manager (automated SSL/TLS), Nextcloud + MariaDB storage, Netdata telemetry, Docker Mailserver, and Tailscale mesh VPN.",
         "tags": [
-          "Python",
-          "Scikit-learn",
-          "Wireshark",
-          "ML"
+          "Linux",
+          "Docker & Portainer",
+          "Cloudflare Tunnels",
+          "Nginx Proxy Manager",
+          "Tailscale",
+          "Nextcloud",
+          "Netdata"
         ],
-        "github": "#",
-        "live": "#"
+        "github": "https://github.com/GuilhermeFerreira80/GuilhermeFerreira80"
+      },
+      {
+        "icon": "fa-shield-halved",
+        "category": "security",
+        "featured": true,
+        "badge": "Cybersecurity",
+        "title": "GNS3 IDS Implementation (Suricata)",
+        "desc": "Implementation and experimental evaluation of a passive Suricata IDS running on Security Onion within virtualized GNS3 network topologies, focusing on custom detection rules and alert fatigue mitigation.",
+        "tags": [
+          "Suricata IDS",
+          "Security Onion",
+          "GNS3",
+          "Wireshark",
+          "Network Security"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/GNS3-IDS-Implementation"
+      },
+      {
+        "icon": "fa-network-wired",
+        "category": "security",
+        "title": "Data Forwarding & Routing Analysis",
+        "desc": "Multi-sector enterprise network design and simulation in GNS3 featuring multi-area OSPF, EIGRP, RIPv2, native OSPFv3 (IPv6), Policy-Based Routing (PBR), switching convergence, and redundant WAN failover.",
+        "tags": [
+          "GNS3",
+          "Cisco IOS",
+          "OSPF / EIGRP",
+          "IPv6 / OSPFv3",
+          "PBR & Failover"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/Data-Forwarding-Routing-Analysis"
+      },
+      {
+        "icon": "fa-sitemap",
+        "category": "security",
+        "title": "Structured Cabling Architecture",
+        "desc": "Mission-critical campus network and physical cabling infrastructure design featuring an OS2 optical fiber ring backbone, Cat.6A distribution, Wi-Fi 7 coverage, and Cisco Packet Tracer simulation.",
+        "tags": [
+          "Cisco Packet Tracer",
+          "OS2 Fiber Ring",
+          "Cat.6A",
+          "Wi-Fi 7",
+          "Enterprise Network"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/Structured-Cabling-Architecture"
       },
       {
         "icon": "fa-cloud",
-        "title": "Cloud Infrastructure Automation",
-        "desc": "Automated AWS infrastructure provisioning using Terraform and Ansible, with CI/CD pipelines integrated for seamless deployments.",
+        "category": "cloud",
+        "badge": "Cloud Resume Challenge",
+        "title": "Serverless Cloud Portfolio & CI/CD",
+        "desc": "Serverless portfolio architecture hosted on AWS S3 and CloudFront with automated GitHub Actions CI/CD deployment pipelines, automatic cache invalidation, and custom domain routing.",
         "tags": [
-          "Terraform",
-          "AWS",
-          "Ansible",
-          "Docker"
+          "AWS S3 & CloudFront",
+          "GitHub Actions CI/CD",
+          "React",
+          "Vite",
+          "Cloudflare DNS"
         ],
-        "github": "#",
-        "live": "#"
+        "github": "https://github.com/GuilhermeFerreira80/Portf-lio_26",
+        "live": "https://www.guiferreira.xyz"
       },
       {
-        "icon": "fa-lock",
-        "title": "Secure Password Manager",
-        "desc": "A CLI-based password manager with AES-256 encryption, master password hashing using bcrypt, and zero-knowledge architecture.",
+        "icon": "fa-terminal",
+        "category": "systems",
+        "title": "Autonomous Taxi Management Platform",
+        "desc": "Distributed autonomous taxi fleet management platform written in C for Linux/UNIX, utilizing multi-process architecture, POSIX threads, named/anonymous pipes, I/O multiplexing via select(), and POSIX signals.",
         "tags": [
-          "Python",
-          "AES-256",
-          "bcrypt",
-          "CLI"
+          "C",
+          "Linux / UNIX",
+          "POSIX Threads",
+          "IPC & Pipes",
+          "select() Multiplexing"
         ],
-        "github": "#"
+        "github": "https://github.com/GuilhermeFerreira80/Taxi-Management-Platform"
       },
       {
-        "icon": "fa-server",
-        "title": "Home Lab Setup & Monitoring",
-        "desc": "Personal home lab with pfSense firewall, Proxmox hypervisor, and a full ELK stack for centralized logging and monitoring.",
+        "icon": "fa-desktop",
+        "category": "systems",
+        "title": "Roadside Message Sign Manager",
+        "desc": "Distributed variable-message sign management system in C/C++ leveraging the Win32 API, named pipes, shared memory, mutex/event synchronization, and a double-buffered GDI graphical interface.",
         "tags": [
-          "pfSense",
-          "Proxmox",
-          "ELK",
-          "Linux"
+          "C / C++",
+          "Win32 API",
+          "Shared Memory",
+          "Named Pipes",
+          "GDI GUI"
         ],
-        "github": "#",
-        "live": "#"
+        "github": "https://github.com/GuilhermeFerreira80/Roadside-Message-Sign-Manager"
+      },
+      {
+        "icon": "fa-database",
+        "category": "systems",
+        "title": "DHCP Management Database",
+        "desc": "Conceptual and physical relational database system modeled in Oracle SQL Developer for centralized management, auditing, and real-time tracking of DHCP subnets, IP pools, leases, and reservations.",
+        "tags": [
+          "Oracle SQL",
+          "Database Design",
+          "DHCP / IPAM",
+          "Data Modeling"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/DHCP-Management-Database"
+      },
+      {
+        "icon": "fa-cubes",
+        "category": "systems",
+        "title": "Garden Simulator Engine",
+        "desc": "Turn-based virtual garden simulation engine in C++14 featuring a dynamic 2D grid, polymorphic plant and tool hierarchies, Command pattern with Factory Method, and deep-copy state snapshots.",
+        "tags": [
+          "C++14",
+          "OOP",
+          "Design Patterns",
+          "Memory Management"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/Garden-Simulator"
       }
     ],
     "pt": [
       {
-        "icon": "fa-shield-alt",
-        "title": "Sistema de Deteção de Intrusões",
-        "desc": "Um IDS baseado em machine learning que monitoriza o tráfego de rede e deteta comportamentos anómalos em tempo real usando Python.",
+        "icon": "fa-server",
+        "category": "cloud",
+        "featured": true,
+        "badge": "Homelab em Produção",
+        "title": "Homelab Self-Hosted & Infraestrutura",
+        "desc": "Ambiente de produção self-hosted em Linux gerido via Docker e Portainer. Inclui exposição segura via Cloudflare Tunnels e Nginx Proxy Manager (SSL/TLS automático), Nextcloud + MariaDB, telemetria com Netdata, Docker Mailserver e VPN mesh Tailscale.",
         "tags": [
-          "Python",
-          "Scikit-learn",
-          "Wireshark",
-          "ML"
+          "Linux",
+          "Docker & Portainer",
+          "Cloudflare Tunnels",
+          "Nginx Proxy Manager",
+          "Tailscale",
+          "Nextcloud",
+          "Netdata"
         ],
-        "github": "#",
-        "live": "#"
+        "github": "https://github.com/GuilhermeFerreira80/GuilhermeFerreira80"
+      },
+      {
+        "icon": "fa-shield-halved",
+        "category": "security",
+        "featured": true,
+        "badge": "Cibersegurança",
+        "title": "Implementação de IDS em GNS3 (Suricata)",
+        "desc": "Implementação e avaliação experimental de um IDS passivo Suricata em Security Onion sobre topologias de rede virtualizadas em GNS3, com foco em regras de deteção personalizadas e mitigação de fadiga de alertas.",
+        "tags": [
+          "Suricata IDS",
+          "Security Onion",
+          "GNS3",
+          "Wireshark",
+          "Segurança de Redes"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/GNS3-IDS-Implementation"
+      },
+      {
+        "icon": "fa-network-wired",
+        "category": "security",
+        "title": "Análise de Encaminhamento & Routing",
+        "desc": "Desenho e simulação de rede empresarial multissetorial em GNS3 com OSPF multi-área, EIGRP, RIPv2, OSPFv3 nativo (IPv6), Policy-Based Routing (PBR), convergência de switching e failover redundante de WAN.",
+        "tags": [
+          "GNS3",
+          "Cisco IOS",
+          "OSPF / EIGRP",
+          "IPv6 / OSPFv3",
+          "PBR & Failover"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/Data-Forwarding-Routing-Analysis"
+      },
+      {
+        "icon": "fa-sitemap",
+        "category": "security",
+        "title": "Arquitetura de Cablagem Estruturada",
+        "desc": "Projeto de infraestrutura de cablagem estruturada e rede hierárquica para um campus crítico, com backbone em anel de fibra ótica OS2, distribuição Cat.6A, cobertura Wi-Fi 7 e simulação em Cisco Packet Tracer.",
+        "tags": [
+          "Cisco Packet Tracer",
+          "Fibra Ótica OS2",
+          "Cat.6A",
+          "Wi-Fi 7",
+          "Redes Empresariais"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/Structured-Cabling-Architecture"
       },
       {
         "icon": "fa-cloud",
-        "title": "Automação de Infraestrutura Cloud",
-        "desc": "Provisionamento automatizado de infraestrutura AWS usando Terraform e Ansible, com pipelines CI/CD integradas.",
+        "category": "cloud",
+        "badge": "Cloud Resume Challenge",
+        "title": "Portfólio Cloud Serverless & CI/CD",
+        "desc": "Arquitetura serverless alojada em AWS S3 e CloudFront com pipelines de deploy CI/CD automatizadas via GitHub Actions, invalidação automática de cache na CDN e gestão de domínio personalizado.",
         "tags": [
-          "Terraform",
-          "AWS",
-          "Ansible",
-          "Docker"
+          "AWS S3 & CloudFront",
+          "GitHub Actions CI/CD",
+          "React",
+          "Vite",
+          "Cloudflare DNS"
         ],
-        "github": "#",
-        "live": "#"
+        "github": "https://github.com/GuilhermeFerreira80/Portf-lio_26",
+        "live": "https://www.guiferreira.xyz"
       },
       {
-        "icon": "fa-lock",
-        "title": "Gestor de Palavras-Passe Seguro",
-        "desc": "Gestor de passwords em CLI com encriptação AES-256, hashing com bcrypt e arquitetura zero-knowledge.",
+        "icon": "fa-terminal",
+        "category": "systems",
+        "title": "Plataforma de Gestão de Táxis Autónomos",
+        "desc": "Plataforma distribuída de gestão de frotas de táxis em C para Linux/UNIX, com arquitetura multiprocesso, POSIX threads, named/anonymous pipes, multiplexagem de I/O via select() e tratamento de sinais POSIX.",
         "tags": [
-          "Python",
-          "AES-256",
-          "bcrypt",
-          "CLI"
+          "C",
+          "Linux / UNIX",
+          "POSIX Threads",
+          "IPC & Pipes",
+          "Multiplexagem select()"
         ],
-        "github": "#"
+        "github": "https://github.com/GuilhermeFerreira80/Taxi-Management-Platform"
       },
       {
-        "icon": "fa-server",
-        "title": "Home Lab e Monitorização",
-        "desc": "Home lab com firewall pfSense, hypervisor Proxmox e stack ELK completa para logging e monitorização centralizada.",
+        "icon": "fa-desktop",
+        "category": "systems",
+        "title": "Gestor de Painéis de Mensagem Variável",
+        "desc": "Sistema distribuído de gestão de painéis rodoviários em C/C++ com recurso à Win32 API, named pipes, memória partilhada, sincronização por mutex/eventos e interface gráfica GDI com double-buffering.",
         "tags": [
-          "pfSense",
-          "Proxmox",
-          "ELK",
-          "Linux"
+          "C / C++",
+          "Win32 API",
+          "Memória Partilhada",
+          "Named Pipes",
+          "GUI GDI"
         ],
-        "github": "#",
-        "live": "#"
+        "github": "https://github.com/GuilhermeFerreira80/Roadside-Message-Sign-Manager"
+      },
+      {
+        "icon": "fa-database",
+        "category": "systems",
+        "title": "Base de Dados de Gestão DHCP",
+        "desc": "Desenho conceptual e físico de base de dados relacional em Oracle SQL Developer para gestão centralizada, auditoria e monitorização em tempo real de sub-redes DHCP, pools de IP, leases e reservas.",
+        "tags": [
+          "Oracle SQL",
+          "Modelação Relacional",
+          "DHCP / IPAM",
+          "Auditoria SQL"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/DHCP-Management-Database"
+      },
+      {
+        "icon": "fa-cubes",
+        "category": "systems",
+        "title": "Motor de Simulação Garden Simulator",
+        "desc": "Motor de simulação por turnos em C++14 com grelha 2D dinâmica, hierarquias polimórficas de plantas e ferramentas, padrões Command e Factory Method, e cópias profundas de estado (snapshots).",
+        "tags": [
+          "C++14",
+          "POO & Polimorfismo",
+          "Design Patterns",
+          "Gestão de Memória"
+        ],
+        "github": "https://github.com/GuilhermeFerreira80/Garden-Simulator"
       }
     ]
   },
@@ -181,82 +396,104 @@
       "categories": [
         {
           "key": "cyber",
-          "title": "Cybersecurity",
+          "title": "Networking & Cybersecurity",
           "icon": "fa-shield-halved",
           "type": "bars",
           "items": [
             {
-              "label": "Penetration Testing",
-              "pct": 75
+              "label": "Routing & Switching (OSPF, EIGRP, VLANs, IPv6)",
+              "pct": 85
             },
             {
-              "label": "Network Security",
+              "label": "Intrusion Detection (Suricata IDS / Security Onion)",
+              "pct": 82
+            },
+            {
+              "label": "Network Topologies (GNS3 & Cisco Packet Tracer)",
+              "pct": 88
+            },
+            {
+              "label": "Zero-Trust, Reverse Proxies & Firewalls",
               "pct": 80
             },
             {
-              "label": "CTF / Forensics",
-              "pct": 70
-            },
-            {
-              "label": "SIEM / Log Analysis",
-              "pct": 65
+              "label": "Packet Analysis & Core Protocols (Wireshark, TCP/IP, DNS/DHCP)",
+              "pct": 85
             }
           ]
         },
         {
           "key": "cloud",
-          "title": "Cloud & DevOps",
+          "title": "Cloud, Homelab & Infrastructure",
           "icon": "fa-cloud",
           "type": "bars",
           "items": [
             {
-              "label": "AWS",
-              "pct": 70
+              "label": "Linux Systems Administration & IPC",
+              "pct": 85
             },
             {
-              "label": "Docker / Kubernetes",
-              "pct": 65
+              "label": "Docker, Portainer & Self-Hosted Services",
+              "pct": 86
             },
             {
-              "label": "Terraform / IaC",
-              "pct": 60
+              "label": "Cloudflare Tunnels, Nginx Proxy Manager & Tailscale",
+              "pct": 84
             },
             {
-              "label": "CI/CD Pipelines",
-              "pct": 68
+              "label": "Public Cloud & CI/CD (AWS S3/CloudFront, Azure, GitHub Actions)",
+              "pct": 74
+            },
+            {
+              "label": "Virtualization & Orchestration (Proxmox VE, VirtualBox, K8s)",
+              "pct": 72
             }
           ]
         },
         {
           "key": "programming",
-          "title": "Programming",
+          "title": "Programming & Databases",
           "icon": "fa-code",
           "type": "pills",
           "items": [
+            "C",
+            "C++",
             "Python",
             "Bash",
-            "JavaScript",
-            "C",
-            "Java",
-            "SQL",
             "PowerShell",
-            "HTML/CSS"
+            "JavaScript",
+            "React",
+            "HTML5 / CSS3",
+            "Oracle SQL",
+            "MySQL / MariaDB",
+            "MATLAB",
+            "Lua"
           ]
         },
         {
           "key": "tools",
-          "title": "Tools & Platforms",
-          "icon": "fa-tools",
+          "title": "Tools, Platforms & Telemetry",
+          "icon": "fa-screwdriver-wrench",
           "type": "pills",
           "items": [
-            "Kali Linux",
+            "GNS3",
+            "Cisco Packet Tracer",
+            "Cisco IOS",
             "Wireshark",
-            "Burp Suite",
-            "Nmap",
-            "Metasploit",
-            "Git",
-            "Linux",
-            "Proxmox"
+            "Suricata IDS",
+            "Security Onion",
+            "Docker",
+            "Portainer",
+            "Cloudflare",
+            "Nginx Proxy Manager",
+            "Tailscale",
+            "Netdata",
+            "Nextcloud",
+            "Proxmox VE",
+            "VirtualBox",
+            "Oracle SQL Developer",
+            "Git & GitHub",
+            "CLion / VS Code"
           ]
         }
       ]
@@ -265,104 +502,130 @@
       "categories": [
         {
           "key": "cyber",
-          "title": "Cibersegurança",
+          "title": "Redes & Cibersegurança",
           "icon": "fa-shield-halved",
           "type": "bars",
           "items": [
             {
-              "label": "Testes de Intrusão",
-              "pct": 75
+              "label": "Routing & Switching (OSPF, EIGRP, VLANs, IPv6)",
+              "pct": 85
             },
             {
-              "label": "Segurança de Redes",
+              "label": "Deteção de Intrusões (Suricata IDS / Security Onion)",
+              "pct": 82
+            },
+            {
+              "label": "Simulação de Redes (GNS3 & Cisco Packet Tracer)",
+              "pct": 88
+            },
+            {
+              "label": "Zero-Trust, Reverse Proxies & Firewalls",
               "pct": 80
             },
             {
-              "label": "CTF / Forense",
-              "pct": 70
-            },
-            {
-              "label": "SIEM / Análise Logs",
-              "pct": 65
+              "label": "Análise de Pacotes & Protocolos (Wireshark, TCP/IP, DNS/DHCP)",
+              "pct": 85
             }
           ]
         },
         {
           "key": "cloud",
-          "title": "Cloud & DevOps",
+          "title": "Cloud, Homelab & Infraestrutura",
           "icon": "fa-cloud",
           "type": "bars",
           "items": [
             {
-              "label": "AWS",
-              "pct": 70
+              "label": "Administração de Sistemas Linux & IPC",
+              "pct": 85
             },
             {
-              "label": "Docker / Kubernetes",
-              "pct": 65
+              "label": "Docker, Portainer & Serviços Self-Hosted",
+              "pct": 86
             },
             {
-              "label": "Terraform / IaC",
-              "pct": 60
+              "label": "Cloudflare Tunnels, Nginx Proxy Manager & Tailscale",
+              "pct": 84
             },
             {
-              "label": "Pipelines CI/CD",
-              "pct": 68
+              "label": "Cloud Pública & CI/CD (AWS S3/CloudFront, Azure, GitHub Actions)",
+              "pct": 74
+            },
+            {
+              "label": "Virtualização & Orquestração (Proxmox VE, VirtualBox, K8s)",
+              "pct": 72
             }
           ]
         },
         {
           "key": "programming",
-          "title": "Programação",
+          "title": "Programação & Bases de Dados",
           "icon": "fa-code",
           "type": "pills",
           "items": [
+            "C",
+            "C++",
             "Python",
             "Bash",
-            "JavaScript",
-            "C",
-            "Java",
-            "SQL",
             "PowerShell",
-            "HTML/CSS"
+            "JavaScript",
+            "React",
+            "HTML5 / CSS3",
+            "Oracle SQL",
+            "MySQL / MariaDB",
+            "MATLAB",
+            "Lua"
           ]
         },
         {
           "key": "tools",
-          "title": "Ferramentas e Plataformas",
-          "icon": "fa-tools",
+          "title": "Ferramentas, Plataformas & Telemetria",
+          "icon": "fa-screwdriver-wrench",
           "type": "pills",
           "items": [
-            "Kali Linux",
+            "GNS3",
+            "Cisco Packet Tracer",
+            "Cisco IOS",
             "Wireshark",
-            "Burp Suite",
-            "Nmap",
-            "Metasploit",
-            "Git",
-            "Linux",
-            "Proxmox"
+            "Suricata IDS",
+            "Security Onion",
+            "Docker",
+            "Portainer",
+            "Cloudflare",
+            "Nginx Proxy Manager",
+            "Tailscale",
+            "Netdata",
+            "Nextcloud",
+            "Proxmox VE",
+            "VirtualBox",
+            "Oracle SQL Developer",
+            "Git & GitHub",
+            "CLion / VS Code"
           ]
         }
       ]
     }
   },
   "contact": {
-    "email": "guilherme@example.com",
+    "email": "guistermen@gmail.com",
     "en": {
-      "intro": "Whether you want to <highlight>collaborate</highlight> on a project, talk about cybersecurity, or just say hi — feel free to reach out!",
+      "intro": "Whether you want to <highlight>collaborate</highlight> on a project, discuss <highlight>cybersecurity, networking, or cloud infrastructure</highlight>, or just say hi — feel free to reach out!",
       "namePlaceholder": "John Doe",
       "emailPlaceholder": "john@example.com",
       "messagePlaceholder": "Hey Guilherme, let's talk about...",
       "sendButton": "Send Message",
-      "sentButton": "Sent!"
+      "sentButton": "Opening Email Client...",
+      "copyLabel": "Copy Email",
+      "copiedLabel": "Copied!"
     },
     "pt": {
-      "intro": "Seja para <highlight>colaborar</highlight> num projeto, falar sobre cibersegurança, ou simplesmente dizer olá — sinta-se à vontade para entrar em contacto!",
+      "intro": "Seja para <highlight>colaborar</highlight> num projeto, trocar ideias sobre <highlight>cibersegurança, redes ou infraestrutura cloud</highlight>, ou simplesmente dizer olá — entra em contacto!",
       "namePlaceholder": "João Silva",
       "emailPlaceholder": "joao@exemplo.com",
       "messagePlaceholder": "Olá Guilherme, queria falar sobre...",
       "sendButton": "Enviar Mensagem",
-      "sentButton": "Enviado!"
+      "sentButton": "A abrir cliente de email...",
+      "copyLabel": "Copiar Email",
+      "copiedLabel": "Copiado!"
     }
   }
 }
