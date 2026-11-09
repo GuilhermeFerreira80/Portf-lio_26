@@ -24,26 +24,26 @@
   "about": {
     "en": {
       "paragraphs": [
-        "<b>Hey!</b> I'm <highlight>Guilherme Ferreira</highlight>, an Informatics Engineering student at <b>Instituto Superior de Engenharia de Coimbra (ISEC)</b> in Portugal, focused on <highlight>Cybersecurity</highlight>, <highlight>Enterprise Networking</highlight>, <highlight>Cloud Engineering</highlight>, and <highlight>Systems Administration</highlight>.",
-        "Alongside my degree, I actively maintain a production <highlight>Self-Hosted Linux & Docker Homelab</highlight> — featuring zero-trust ingress via <b>Cloudflare Tunnels</b> and <b>Nginx Proxy Manager</b>, private cloud storage with <b>Nextcloud & MariaDB</b>, real-time telemetry through <b>Netdata</b>, containerized mail services, and encrypted node-to-node management over a <b>Tailscale</b> mesh VPN.",
-        "Whether I'm deploying <highlight>Suricata IDS</highlight> sensors on Security Onion, designing multi-area OSPF/IPv6 topologies in <b>GNS3</b>, or writing low-level multi-process systems in <b>C/C++</b>, my goal is to build a solid technical foundation bridging infrastructure, networking, cloud, and defensive security."
+        "<b>Hey!</b> I'm <highlight>Guilherme</highlight>, an Informatics Engineering student at <b>ISEC</b> who loves spending time in front of the computer, fishing, and hanging out and laughing with my friends, whether they are from Scouts or school.",
+        "Currently, I am looking for a <highlight>curricular internship</highlight> in the field, where I can take my first steps towards building a career in one of my main areas of interest: <highlight>Cloud Engineering</highlight>, <highlight>Cybersecurity</highlight>, or <highlight>Network Management</highlight>.",
+        "I hope to find a company whose values I identify with and where I can genuinely enjoy working, contributing, and growing professionally."
       ],
-      "focusTitle": "CURRENT FOCUS & GOALS",
+      "focusTitle": "AREAS OF INTEREST",
       "focusItems": [
         {
-          "icon": "fa-shield-halved",
-          "title": "Defensive Cybersecurity & IDS",
-          "desc": "Threat detection, Suricata IDS rules on Security Onion, traffic analysis, and alert fatigue mitigation."
+          "icon": "fa-cloud",
+          "title": "Cloud Engineering",
+          "desc": "Cloud infrastructure, serverless solutions, containerization, and modern deployment workflows."
         },
         {
-          "icon": "fa-cloud",
-          "title": "Cloud Engineering & DevOps",
-          "desc": "Serverless architectures on AWS (S3, CloudFront, IAM), automated GitHub Actions CI/CD, and container orchestration."
+          "icon": "fa-shield-halved",
+          "title": "Cybersecurity",
+          "desc": "Defensive security principles, network protection, vulnerability awareness, and secure system setups."
         },
         {
           "icon": "fa-network-wired",
-          "title": "Networking & Self-Hosted Infra",
-          "desc": "Enterprise routing/switching (OSPF, EIGRP, VLANs, Fiber/Wi-Fi 7) and 24/7 Linux homelab administration."
+          "title": "Network Management",
+          "desc": "Enterprise routing, switching, infrastructure topology design, and systems administration."
         }
       ],
       "stats": [
@@ -66,26 +66,26 @@
     },
     "pt": {
       "paragraphs": [
-        "<b>Olá!</b> Sou o <highlight>Guilherme Ferreira</highlight>, estudante de Engenharia Informática no <b>Instituto Superior de Engenharia de Coimbra (ISEC)</b>, focado em <highlight>Cibersegurança</highlight>, <highlight>Redes Empresariais</highlight>, <highlight>Cloud Engineering</highlight> e <highlight>Administração de Sistemas</highlight>.",
-        "Em paralelo com a licenciatura, mantenho ativamente um <highlight>Homelab Self-Hosted em Linux e Docker</highlight> — com exposição segura sem port-forwarding via <b>Cloudflare Tunnels</b> e <b>Nginx Proxy Manager</b>, cloud privada com <b>Nextcloud e MariaDB</b>, telemetria em tempo real com <b>Netdata</b>, servidor de email contentorizado e administração encriptada via rede mesh <b>Tailscale</b>.",
-        "Seja a implementar sensores <highlight>Suricata IDS</highlight> em Security Onion, a arquitetar topologias OSPF/IPv6 no <b>GNS3</b> ou a desenvolver sistemas multiprocesso de baixo nível em <b>C/C++</b>, o meu objetivo é construir uma base técnica sólida que una infraestrutura, redes, cloud e segurança defensiva."
+        "<b>Olá!</b> Sou o <highlight>Guilherme</highlight>, estudante de Engenharia Informática no <b>ISEC</b>, que adora passar tempo em frente ao computador, pescar e estar na galhofa e rir com os amigos, sejam eles dos Escuteiros ou da escola.",
+        "Atualmente, estou à procura de um <highlight>estágio curricular</highlight> na área, onde possa dar os meus primeiros passos rumo à construção de uma carreira numa das minhas áreas de interesse: <highlight>Cloud Engineering</highlight>, <highlight>Cibersegurança</highlight> ou <highlight>Gestão de Redes</highlight>.",
+        "Espero encontrar uma empresa com cujos valores me identifique e onde possa genuinamente gostar de trabalhar, contribuir e crescer a nível profissional."
       ],
-      "focusTitle": "FOCO ATUAL & OBJETIVOS",
+      "focusTitle": "ÁREAS DE INTERESSE",
       "focusItems": [
         {
-          "icon": "fa-shield-halved",
-          "title": "Cibersegurança Defensiva & IDS",
-          "desc": "Deteção de ameaças, regras Suricata IDS em Security Onion, análise de tráfego e mitigação de fadiga de alertas."
+          "icon": "fa-cloud",
+          "title": "Cloud Engineering",
+          "desc": "Infraestruturas cloud, soluções serverless, contentorização e workflows modernos de deployment."
         },
         {
-          "icon": "fa-cloud",
-          "title": "Cloud Engineering & CI/CD",
-          "desc": "Arquiteturas serverless na AWS (S3, CloudFront, IAM), pipelines CI/CD com GitHub Actions e contentorização."
+          "icon": "fa-shield-halved",
+          "title": "Cibersegurança",
+          "desc": "Princípios de segurança defensiva, proteção de redes, mitigação de ameaças e ambientes seguros."
         },
         {
           "icon": "fa-network-wired",
-          "title": "Redes & Infraestrutura Self-Hosted",
-          "desc": "Encaminhamento empresarial (OSPF, EIGRP, VLANs, Fibra/Wi-Fi 7) e administração de homelab Linux 24/7."
+          "title": "Gestão de Redes",
+          "desc": "Encaminhamento empresarial, switching, desenho de topologias de rede e administração de sistemas."
         }
       ],
       "stats": [
