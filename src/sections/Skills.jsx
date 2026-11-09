@@ -1,19 +1,6 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef } from 'react'
 import data from '../data/portfolioData.json'
-
-function useReveal(ref) {
-  const [visible, setVisible] = useState(false)
-  useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { threshold: 0.1 }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [ref])
-  return visible
-}
+import { useReveal } from '../hooks/useReveal'
 
 function SkillBar({ label, pct, visible }) {
   return (
@@ -23,10 +10,7 @@ function SkillBar({ label, pct, visible }) {
         <span className="skill-pct">{pct}%</span>
       </div>
       <div className="skill-bar-track">
-        <div
-          className="skill-bar-fill"
-          style={{ width: visible ? `${pct}%` : '0%' }}
-        />
+        <div className="skill-bar-fill" style={{ transform: `scaleX(${visible ? pct / 100 : 0})` }} />
       </div>
     </div>
   )
@@ -37,20 +21,14 @@ function SkillBlock({ block, delay }) {
   const visible = useReveal(ref)
 
   return (
-    <div
-      ref={ref}
-      className={`skill-category reveal${visible ? ' visible' : ''}`}
-      style={{ transitionDelay: `${delay}ms` }}
-    >
+    <div ref={ref} className={`skill-category reveal${visible ? ' visible' : ''}`} style={{ transitionDelay: `${delay}ms` }}>
       <h3 className="skill-cat-title">
         <i className={`fas ${block.icon}`} />
         <span>{block.title}</span>
       </h3>
       {block.type === 'bars' && (
         <div className="skill-bars">
-          {block.items.map(b => (
-            <SkillBar key={b.label} label={b.label} pct={b.pct} visible={visible} />
-          ))}
+          {block.items.map(b => <SkillBar key={b.label} label={b.label} pct={b.pct} visible={visible} />)}
         </div>
       )}
       {block.type === 'pills' && (
@@ -68,13 +46,11 @@ export default function Skills({ lang }) {
   return (
     <section id="skills" className="section">
       <div className="section-header">
-        <span className="section-tag">{lang === 'en' ? 'SKILLS' : 'COMPETÊNCIAS'}</span>
+        <span className="section-tag">{lang === 'en' ? 'Skills' : 'Competências'}</span>
         <div className="section-line" />
       </div>
       <div className="skills-content">
-        {categories.map((block, i) => (
-          <SkillBlock key={block.key} block={block} delay={i * 80} />
-        ))}
+        {categories.map((block, i) => <SkillBlock key={block.key} block={block} delay={i * 70} />)}
       </div>
     </section>
   )

@@ -1,20 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import data from '../data/portfolioData.json'
 import { parseRichText } from '../data/parseRichText'
-
-function useReveal(ref) {
-  const [visible, setVisible] = useState(false)
-  useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { threshold: 0.12 }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [ref])
-  return visible
-}
+import { useReveal } from '../hooks/useReveal'
 
 function useCounter(target, visible) {
   const [count, setCount] = useState(0)
@@ -38,7 +25,7 @@ function StatCard({ target, suffix, label }) {
   const count = useCounter(target, visible)
   return (
     <div className="stat-card" ref={ref}>
-      <span className="stat-num">{count}</span><span className="stat-suffix">{suffix}</span>
+      <span className="stat-num">{count}{suffix}</span>
       <p className="stat-label">{label}</p>
     </div>
   )
@@ -57,7 +44,7 @@ export default function About({ lang }) {
   return (
     <section id="about" className="section">
       <div className="section-header">
-        <span className="section-tag">{lang === 'en' ? 'ABOUT' : 'SOBRE'}</span>
+        <span className="section-tag">{lang === 'en' ? 'About' : 'Sobre'}</span>
         <div className="section-line" />
       </div>
 
@@ -68,36 +55,21 @@ export default function About({ lang }) {
       </div>
 
       {aboutData.focusItems && (
-        <div
-          className={`focus-block reveal${focusVisible ? ' visible' : ''}`}
-          ref={focusRef}
-          style={{ transitionDelay: '0.1s' }}
-        >
-          <h3 className="focus-heading">
-            <i className="fas fa-crosshairs" />
-            <span>{aboutData.focusTitle}</span>
-          </h3>
+        <div className={`focus-block reveal${focusVisible ? ' visible' : ''}`} ref={focusRef}>
+          <h3 className="focus-heading">{aboutData.focusTitle}</h3>
           <div className="focus-grid">
             {aboutData.focusItems.map((item, i) => (
               <div key={i} className="focus-item">
-                <div className="focus-item-icon">
-                  <i className={`fas ${item.icon}`} />
-                </div>
-                <div className="focus-item-body">
-                  <h4>{item.title}</h4>
-                  <p>{item.desc}</p>
-                </div>
+                <i className={`fas ${item.icon} focus-item-icon`} />
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       )}
 
-      <div
-        className={`stats-grid reveal${statsVisible ? ' visible' : ''}`}
-        ref={statsRef}
-        style={{ transitionDelay: '0.18s' }}
-      >
+      <div className={`stats-grid reveal${statsVisible ? ' visible' : ''}`} ref={statsRef}>
         {aboutData.stats.map((stat, i) => (
           <StatCard key={i} target={stat.target} suffix={stat.suffix} label={stat.label} />
         ))}

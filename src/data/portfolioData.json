@@ -613,9 +613,12 @@
       "emailPlaceholder": "john@example.com",
       "messagePlaceholder": "Hey Guilherme, let's talk about...",
       "sendButton": "Send Message",
-      "sentButton": "Opening Email Client...",
+      "sentButton": "Email app opened",
       "copyLabel": "Copy Email",
-      "copiedLabel": "Copied!"
+      "copiedLabel": "Copied!",
+      "fallbackText": "Your email app should have opened with the message ready. Nothing happened? Send it another way:",
+      "copyMessageLabel": "Copy message",
+      "copiedMessageLabel": "Message copied!"
     },
     "pt": {
       "intro": "Seja para <highlight>colaborar</highlight> num projeto, trocar ideias sobre <highlight>cibersegurança, redes ou infraestrutura cloud</highlight>, ou simplesmente dizer olá — entra em contacto!",
@@ -623,9 +626,12 @@
       "emailPlaceholder": "joao@exemplo.com",
       "messagePlaceholder": "Olá Guilherme, queria falar sobre...",
       "sendButton": "Enviar Mensagem",
-      "sentButton": "A abrir cliente de email...",
+      "sentButton": "App de email aberta",
       "copyLabel": "Copiar Email",
-      "copiedLabel": "Copiado!"
+      "copiedLabel": "Copiado!",
+      "fallbackText": "A tua app de email deve ter aberto com a mensagem pronta. Não aconteceu nada? Envia de outra forma:",
+      "copyMessageLabel": "Copiar mensagem",
+      "copiedMessageLabel": "Mensagem copiada!"
     }
   }
 }

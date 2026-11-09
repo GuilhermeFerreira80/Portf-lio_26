@@ -1,77 +1,75 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState } from 'react'
 import data from '../data/portfolioData.json'
 import { parseRichText } from '../data/parseRichText'
+import { useReveal } from '../hooks/useReveal'
+import { composeMessage, buildMailto, buildGmail, buildOutlook } from '../data/mailto'
 
-function useReveal(ref) {
-  const [visible, setVisible] = useState(false)
-  useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true) },
-      { threshold: 0.1 }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [ref])
-  return visible
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text)
+    return true
+  } catch {
+    return false
+  }
 }
 
 export default function Contact({ lang }) {
-  const [sent, setSent] = useState(false)
-  const [copied, setCopied] = useState(false)
-  const formRef = useRef(null)
+  const [draft, setDraft] = useState(null) // { subject, body } after submit
+  const [copiedEmail, setCopiedEmail] = useState(false)
+  const [copiedMsg, setCopiedMsg] = useState(false)
   const contentRef = useRef(null)
   const visible = useReveal(contentRef)
 
   const c = data.contact[lang]
+  const to = data.contact.email
   const personal = data.personal
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const formData = new FormData(e.currentTarget)
-    const name = (formData.get('name') || '').toString().trim()
-    const email = (formData.get('email') || '').toString().trim()
-    const message = (formData.get('message') || '').toString().trim()
+    const form = new FormData(e.currentTarget)
+    const message = composeMessage({
+      name: String(form.get('name') || '').trim(),
+      email: String(form.get('email') || '').trim(),
+      message: String(form.get('message') || '').trim(),
+      lang,
+    })
+    setDraft(message)
 
-    const subject = encodeURIComponent(
-      lang === 'en'
-        ? `Portfolio Contact from ${name || 'Visitor'}`
-        : `Contacto via Portfólio de ${name || 'Visitante'}`
-    )
-    const body = encodeURIComponent(
-      `${message}\n\n---\n${name ? `${lang === 'en' ? 'From' : 'De'}: ${name}\n` : ''}${email ? `Email: ${email}` : ''}`
-    )
-
-    window.location.href = `mailto:${data.contact.email}?subject=${subject}&body=${body}`
-
-    setSent(true)
-    setTimeout(() => {
-      setSent(false)
-      formRef.current?.reset()
-    }, 3000)
+    // A real anchor click is more reliable than assigning window.location
+    const a = document.createElement('a')
+    a.href = buildMailto(to, message)
+    a.rel = 'noopener'
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
   }
 
   const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(data.contact.email)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2200)
-    } catch {
-      window.location.href = `mailto:${data.contact.email}`
+    if (await copyText(to)) {
+      setCopiedEmail(true)
+      setTimeout(() => setCopiedEmail(false), 2000)
+    }
+  }
+
+  const handleCopyMessage = async () => {
+    if (!draft) return
+    if (await copyText(`${draft.subject}\n\n${draft.body}`)) {
+      setCopiedMsg(true)
+      setTimeout(() => setCopiedMsg(false), 2000)
     }
   }
 
   return (
     <section id="contact" className="section section-last">
       <div className="section-header">
-        <span className="section-tag">{lang === 'en' ? 'CONTACT' : 'CONTACTO'}</span>
+        <span className="section-tag">{lang === 'en' ? 'Contact' : 'Contacto'}</span>
         <div className="section-line" />
       </div>
 
       <div ref={contentRef} className={`reveal${visible ? ' visible' : ''}`}>
         <p className="contact-intro">{parseRichText(c.intro)}</p>
 
-        <form className="contact-form" ref={formRef} onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="contact-name">{lang === 'en' ? 'Name' : 'Nome'}</label>
@@ -86,25 +84,38 @@ export default function Contact({ lang }) {
             <label htmlFor="contact-message">{lang === 'en' ? 'Message' : 'Mensagem'}</label>
             <textarea id="contact-message" name="message" rows={5} placeholder={c.messagePlaceholder} required />
           </div>
-          <button type="submit" className={`btn-send${sent ? ' sent' : ''}`}>
-            <span>{sent ? c.sentButton : c.sendButton}</span>
-            <i className={`fas ${sent ? 'fa-check' : 'fa-paper-plane'}`} />
+          <button type="submit" className={`btn-send${draft ? ' sent' : ''}`}>
+            <span>{draft ? c.sentButton : c.sendButton}</span>
+            <i className={`fas ${draft ? 'fa-check' : 'fa-arrow-right'}`} />
           </button>
         </form>
 
+        {draft && (
+          <div className="mail-fallback" role="status">
+            <p>{c.fallbackText}</p>
+            <div className="mail-fallback-actions">
+              <a href={buildGmail(to, draft)} target="_blank" rel="noopener noreferrer" className="chip">
+                <i className="fab fa-google" /> Gmail
+              </a>
+              <a href={buildOutlook(to, draft)} target="_blank" rel="noopener noreferrer" className="chip">
+                <i className="fab fa-microsoft" /> Outlook
+              </a>
+              <button type="button" onClick={handleCopyMessage} className="chip">
+                <i className={`fas ${copiedMsg ? 'fa-check' : 'fa-copy'}`} />
+                {copiedMsg ? c.copiedMessageLabel : c.copyMessageLabel}
+              </button>
+            </div>
+          </div>
+        )}
+
         <div className="contact-alternatives">
-          <a href={`mailto:${data.contact.email}`} className="contact-alt-link">
-            <i className="fas fa-envelope" />
-            <span>{data.contact.email}</span>
+          <a href={`mailto:${to}`} className="contact-alt-link">
+            <i className="far fa-envelope" />
+            <span>{to}</span>
           </a>
-          <button
-            type="button"
-            onClick={handleCopyEmail}
-            className="contact-alt-btn"
-            aria-label={c.copyLabel || 'Copy Email'}
-          >
-            <i className={`fas ${copied ? 'fa-check' : 'fa-copy'}`} />
-            <span>{copied ? (c.copiedLabel || 'Copied!') : (c.copyLabel || 'Copy Email')}</span>
+          <button type="button" onClick={handleCopyEmail} className="contact-alt-link" aria-label={c.copyLabel}>
+            <i className={`fas ${copiedEmail ? 'fa-check' : 'fa-copy'}`} />
+            <span>{copiedEmail ? c.copiedLabel : c.copyLabel}</span>
           </button>
           <a href={personal.socials.github} target="_blank" rel="noopener noreferrer" className="contact-alt-link">
             <i className="fab fa-github" />
