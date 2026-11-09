@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import data from '../data/portfolioData.json'
-import profileImg from '../assets/profile.png'
 
 const NAV_LABELS = {
   en: { about: 'About', projects: 'Projects', skills: 'Skills', contact: 'Contact', cv: 'Download CV' },
@@ -93,10 +92,6 @@ export default function LeftPanel({ activeSection, onNavClick, lang }) {
             ))}
           </ul>
         </nav>
-      </div>
-
-      <div className="profile-photo-wrapper">
-        <img src={profileImg} alt={displayName} className="profile-photo" draggable="false" />
       </div>
 
       <div className="social-links">
