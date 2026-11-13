@@ -450,6 +450,97 @@ b { color: var(--text-strong); font-weight: 600; }
 
 .focus-item p { font-size: 0.76rem; line-height: 1.6; }
 
+/* ---- Credentials (Education, Certifications, Volunteering, Languages) ---- */
+.credentials-block {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.cred-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.cred-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: border-color var(--t);
+}
+.cred-row:hover { border-color: var(--border-hover); }
+
+.cred-main h4 {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-strong);
+  line-height: 1.4;
+}
+
+.cred-org {
+  font-size: 0.76rem;
+  color: var(--text);
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+
+.cred-period {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  padding-top: 0.15rem;
+}
+
+.cred-badge {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.12rem 0.48rem;
+  border-radius: 6px;
+  background: var(--accent);
+  color: var(--accent-inv);
+}
+
+.cred-split {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.lang-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.lang-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.76rem;
+}
+.lang-pill strong { color: var(--text-strong); font-weight: 600; }
+.lang-pill span { font-family: var(--font-mono); font-size: 0.66rem; color: var(--text-dim); }
+
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -869,7 +960,7 @@ b { color: var(--text-strong); font-weight: 600; }
    RESPONSIVE
    ==================================================== */
 @media (max-width: 1120px) {
-  .focus-grid { grid-template-columns: 1fr; }
+  .focus-grid, .cred-split { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 1024px) {
@@ -886,6 +977,7 @@ b { color: var(--text-strong); font-weight: 600; }
   .left-panel { width: 100%; padding: 4.5rem 1.5rem 1.5rem; }
   .right-panel { height: auto; overflow: visible; padding: 1.5rem 1.5rem 3rem; }
   .form-row { grid-template-columns: 1fr; }
+  .cred-row { flex-direction: column; gap: 0.35rem; }
   .profile-photo-wrapper { display: none; }
   .social-links { margin-top: 2rem; flex-wrap: wrap; }
   .name { white-space: normal; }

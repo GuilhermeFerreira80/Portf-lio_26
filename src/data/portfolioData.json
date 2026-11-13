@@ -53,16 +53,55 @@
           "label": "Featured Projects"
         },
         {
-          "target": 25,
-          "suffix": "+",
-          "label": "Technologies & Tools"
+          "target": 1,
+          "suffix": "",
+          "label": "CCNA Certified"
         },
         {
-          "target": 6,
-          "suffix": "+",
-          "label": "Homelab Services"
+          "target": 3,
+          "suffix": "",
+          "label": "Languages"
         }
-      ]
+      ],
+      "credentials": {
+        "educationTitle": "EDUCATION",
+        "education": [
+          {
+            "title": "B.Sc. in Informatics Engineering",
+            "org": "Instituto Superior de Engenharia de Coimbra (ISEC)",
+            "detail": "Networks and Systems Administration Track",
+            "period": "SEP. 2024 — PRESENT"
+          },
+          {
+            "title": "Secondary Education — Science and Technology",
+            "org": "Escola Básica e Secundária de Penacova (AEPenacova)",
+            "period": "SEP. 2021 — JUN. 2023"
+          }
+        ],
+        "certificationsTitle": "CERTIFICATIONS",
+        "certifications": [
+          {
+            "badge": "CCNA",
+            "title": "CCNA — Cisco Certified Network Associate",
+            "org": "Cisco",
+            "period": "JUL. 2026"
+          }
+        ],
+        "volunteeringTitle": "VOLUNTEERING",
+        "volunteering": [
+          {
+            "title": "Corpo Nacional de Escutas (CNE) — Scout Movement",
+            "desc": "Active participation in scouting activities, with experience in team coordination, organization, and communication.",
+            "period": "SEP. 2010 — PRESENT"
+          }
+        ],
+        "languagesTitle": "LANGUAGES",
+        "languages": [
+          { "name": "Portuguese", "level": "Fluent" },
+          { "name": "English", "level": "C1" },
+          { "name": "Spanish", "level": "Intermediate" }
+        ]
+      }
     },
     "pt": {
       "paragraphs": [
@@ -95,16 +134,55 @@
           "label": "Projetos em Destaque"
         },
         {
-          "target": 25,
-          "suffix": "+",
-          "label": "Tecnologias & Ferramentas"
+          "target": 1,
+          "suffix": "",
+          "label": "Certificação CCNA"
         },
         {
-          "target": 6,
-          "suffix": "+",
-          "label": "Serviços Homelab"
+          "target": 3,
+          "suffix": "",
+          "label": "Idiomas"
         }
-      ]
+      ],
+      "credentials": {
+        "educationTitle": "EDUCAÇÃO",
+        "education": [
+          {
+            "title": "Licenciatura em Engenharia Informática",
+            "org": "Instituto Superior de Engenharia de Coimbra (ISEC)",
+            "detail": "Ramo de Administração de Redes e Sistemas",
+            "period": "SET. 2024 — PRESENTE"
+          },
+          {
+            "title": "Ensino Secundário — Ciências e Tecnologias",
+            "org": "Escola Básica e Secundária de Penacova (AEPenacova)",
+            "period": "SET. 2021 — JUN. 2023"
+          }
+        ],
+        "certificationsTitle": "CERTIFICAÇÕES",
+        "certifications": [
+          {
+            "badge": "CCNA",
+            "title": "CCNA — Cisco Certified Network Associate",
+            "org": "Cisco",
+            "period": "JUL. 2026"
+          }
+        ],
+        "volunteeringTitle": "VOLUNTARIADO",
+        "volunteering": [
+          {
+            "title": "Corpo Nacional de Escutas (CNE) — Escutismo",
+            "desc": "Participação ativa em atividades escutistas, com experiência em coordenação de equipas, organização e comunicação.",
+            "period": "SET. 2010 — PRESENTE"
+          }
+        ],
+        "languagesTitle": "IDIOMAS",
+        "languages": [
+          { "name": "Português", "level": "Fluente" },
+          { "name": "Inglês", "level": "C1" },
+          { "name": "Espanhol", "level": "Intermédio" }
+        ]
+      }
     }
   },
   "projects": {
@@ -395,105 +473,97 @@
     "en": {
       "categories": [
         {
-          "key": "cyber",
-          "title": "Networking & Cybersecurity",
-          "icon": "fa-shield-halved",
-          "type": "bars",
+          "key": "networking",
+          "title": "Networking",
+          "icon": "fa-network-wired",
+          "type": "pills",
           "items": [
-            {
-              "label": "Routing & Switching (OSPF, EIGRP, VLANs, IPv6)",
-              "pct": 85
-            },
-            {
-              "label": "Intrusion Detection (Suricata IDS / Security Onion)",
-              "pct": 82
-            },
-            {
-              "label": "Network Topologies (GNS3 & Cisco Packet Tracer)",
-              "pct": 88
-            },
-            {
-              "label": "Zero-Trust, Reverse Proxies & Firewalls",
-              "pct": 80
-            },
-            {
-              "label": "Packet Analysis & Core Protocols (Wireshark, TCP/IP, DNS/DHCP)",
-              "pct": 85
-            }
+            "Network Architecture",
+            "Routing & Switching",
+            "Network Services",
+            "Cabling",
+            "Troubleshooting",
+            "GNS3",
+            "Cisco Packet Tracer"
+          ]
+        },
+        {
+          "key": "sysadmin",
+          "title": "Systems Admin",
+          "icon": "fa-server",
+          "type": "pills",
+          "items": [
+            "Linux & Windows Admin",
+            "Servers",
+            "Virtualization",
+            "Containers",
+            "Infrastructure Management",
+            "Netdata"
+          ]
+        },
+        {
+          "key": "cyber",
+          "title": "Cybersecurity",
+          "icon": "fa-shield-halved",
+          "type": "pills",
+          "items": [
+            "Network & Systems Security",
+            "Firewalls",
+            "Traffic Analysis",
+            "Intrusion Detection",
+            "Suricata",
+            "VPNs & Hardening"
           ]
         },
         {
           "key": "cloud",
-          "title": "Cloud, Homelab & Infrastructure",
+          "title": "Cloud & DevOps",
           "icon": "fa-cloud",
-          "type": "bars",
+          "type": "pills",
           "items": [
-            {
-              "label": "Linux Systems Administration & IPC",
-              "pct": 85
-            },
-            {
-              "label": "Docker, Portainer & Self-Hosted Services",
-              "pct": 86
-            },
-            {
-              "label": "Cloudflare Tunnels, Nginx Proxy Manager & Tailscale",
-              "pct": 84
-            },
-            {
-              "label": "Public Cloud & CI/CD (AWS S3/CloudFront, Azure, GitHub Actions)",
-              "pct": 74
-            },
-            {
-              "label": "Virtualization & Orchestration (Proxmox VE, VirtualBox, K8s)",
-              "pct": 72
-            }
+            "Cloud Infrastructure",
+            "AWS (S3 & CloudFront)",
+            "Docker",
+            "CI/CD & Automation",
+            "GitHub Actions",
+            "Self-Hosting & Remote Access",
+            "Cloudflare Tunnel",
+            "Nginx Proxy Manager"
           ]
         },
         {
           "key": "programming",
-          "title": "Programming & Databases",
+          "title": "Programming",
           "icon": "fa-code",
           "type": "pills",
           "items": [
             "C",
+            "C#",
             "C++",
-            "Python",
-            "Bash",
-            "PowerShell",
+            "Go",
+            "Rust",
             "JavaScript",
-            "React",
-            "HTML5 / CSS3",
-            "Oracle SQL",
-            "MySQL / MariaDB",
-            "MATLAB",
-            "Lua"
+            "Bash",
+            "SQL",
+            "Web Development"
           ]
         },
         {
-          "key": "tools",
-          "title": "Tools, Platforms & Telemetry",
-          "icon": "fa-screwdriver-wrench",
+          "key": "ai-soft",
+          "title": "AI Tools & Soft Skills",
+          "icon": "fa-wand-magic-sparkles",
           "type": "pills",
           "items": [
-            "GNS3",
-            "Cisco Packet Tracer",
-            "Cisco IOS",
-            "Wireshark",
-            "Suricata IDS",
-            "Security Onion",
-            "Docker",
-            "Portainer",
-            "Cloudflare",
-            "Nginx Proxy Manager",
-            "Tailscale",
-            "Netdata",
-            "Nextcloud",
-            "Proxmox VE",
-            "VirtualBox",
-            "Oracle SQL Developer",
-            "Git & GitHub",
-            "CLion / VS Code"
+            "LLMs",
+            "Antigravity (Coding Harness)",
+            "Prompting",
+            "AI-Assisted Dev & Troubleshooting",
+            "Problem Solving",
+            "Critical Thinking",
+            "Autonomy",
+            "Teamwork",
+            "Adaptability",
+            "Organization"
           ]
         }
       ]
@@ -501,105 +571,97 @@
     "pt": {
       "categories": [
         {
-          "key": "cyber",
-          "title": "Redes & Cibersegurança",
-          "icon": "fa-shield-halved",
-          "type": "bars",
+          "key": "networking",
+          "title": "Redes",
+          "icon": "fa-network-wired",
+          "type": "pills",
           "items": [
-            {
-              "label": "Routing & Switching (OSPF, EIGRP, VLANs, IPv6)",
-              "pct": 85
-            },
-            {
-              "label": "Deteção de Intrusões (Suricata IDS / Security Onion)",
-              "pct": 82
-            },
-            {
-              "label": "Simulação de Redes (GNS3 & Cisco Packet Tracer)",
-              "pct": 88
-            },
-            {
-              "label": "Zero-Trust, Reverse Proxies & Firewalls",
-              "pct": 80
-            },
-            {
-              "label": "Análise de Pacotes & Protocolos (Wireshark, TCP/IP, DNS/DHCP)",
-              "pct": 85
-            }
+            "Arquitetura de Redes",
+            "Routing & Switching",
+            "Serviços de Rede",
+            "Cablagem",
+            "Troubleshooting",
+            "GNS3",
+            "Cisco Packet Tracer"
+          ]
+        },
+        {
+          "key": "sysadmin",
+          "title": "Administração de Sistemas",
+          "icon": "fa-server",
+          "type": "pills",
+          "items": [
+            "Administração Linux & Windows",
+            "Servidores",
+            "Virtualização",
+            "Contentores",
+            "Gestão de Infraestrutura",
+            "Netdata"
+          ]
+        },
+        {
+          "key": "cyber",
+          "title": "Cibersegurança",
+          "icon": "fa-shield-halved",
+          "type": "pills",
+          "items": [
+            "Segurança de Redes & Sistemas",
+            "Firewalls",
+            "Análise de Tráfego",
+            "Deteção de Intrusões",
+            "Suricata",
+            "VPNs & Hardening"
           ]
         },
         {
           "key": "cloud",
-          "title": "Cloud, Homelab & Infraestrutura",
+          "title": "Cloud & DevOps",
           "icon": "fa-cloud",
-          "type": "bars",
+          "type": "pills",
           "items": [
-            {
-              "label": "Administração de Sistemas Linux & IPC",
-              "pct": 85
-            },
-            {
-              "label": "Docker, Portainer & Serviços Self-Hosted",
-              "pct": 86
-            },
-            {
-              "label": "Cloudflare Tunnels, Nginx Proxy Manager & Tailscale",
-              "pct": 84
-            },
-            {
-              "label": "Cloud Pública & CI/CD (AWS S3/CloudFront, Azure, GitHub Actions)",
-              "pct": 74
-            },
-            {
-              "label": "Virtualização & Orquestração (Proxmox VE, VirtualBox, K8s)",
-              "pct": 72
-            }
+            "Infraestrutura Cloud",
+            "AWS (S3 & CloudFront)",
+            "Docker",
+            "CI/CD & Automação",
+            "GitHub Actions",
+            "Self-Hosting & Acesso Remoto",
+            "Cloudflare Tunnel",
+            "Nginx Proxy Manager"
           ]
         },
         {
           "key": "programming",
-          "title": "Programação & Bases de Dados",
+          "title": "Programação",
           "icon": "fa-code",
           "type": "pills",
           "items": [
             "C",
+            "C#",
             "C++",
-            "Python",
-            "Bash",
-            "PowerShell",
+            "Go",
+            "Rust",
             "JavaScript",
-            "React",
-            "HTML5 / CSS3",
-            "Oracle SQL",
-            "MySQL / MariaDB",
-            "MATLAB",
-            "Lua"
+            "Bash",
+            "SQL",
+            "Desenvolvimento Web"
           ]
         },
         {
-          "key": "tools",
-          "title": "Ferramentas, Plataformas & Telemetria",
-          "icon": "fa-screwdriver-wrench",
+          "key": "ai-soft",
+          "title": "Ferramentas IA & Soft Skills",
+          "icon": "fa-wand-magic-sparkles",
           "type": "pills",
           "items": [
-            "GNS3",
-            "Cisco Packet Tracer",
-            "Cisco IOS",
-            "Wireshark",
-            "Suricata IDS",
-            "Security Onion",
-            "Docker",
-            "Portainer",
-            "Cloudflare",
-            "Nginx Proxy Manager",
-            "Tailscale",
-            "Netdata",
-            "Nextcloud",
-            "Proxmox VE",
-            "VirtualBox",
-            "Oracle SQL Developer",
-            "Git & GitHub",
-            "CLion / VS Code"
+            "LLMs",
+            "Antigravity (Coding Harness)",
+            "Prompting",
+            "Dev & Troubleshooting Assistido por IA",
+            "Resolução de Problemas",
+            "Pensamento Crítico",
+            "Autonomia",
+            "Trabalho em Equipa",
+            "Adaptabilidade",
+            "Organização"
           ]
         }
       ]
